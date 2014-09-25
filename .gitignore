@@ -38,3 +38,5 @@ Icon
 # File to ignore
 *.class
 target/*.jar
+.idea/*
+*.iml

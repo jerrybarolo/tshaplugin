@@ -5,6 +5,7 @@
  */
 package common;
 
+import com.google.common.eventbus.EventBus;
 import javafx.scene.control.MenuBar;
 import javafx.stage.Stage;
 
@@ -16,10 +17,12 @@ public class PluginConfiguration {
 
     private Stage mainStage;
     private MenuBar menuBar;
+    private EventBus eventBus;
 
-    public PluginConfiguration(Stage mainStage, MenuBar menuBar) {
+    public PluginConfiguration(Stage mainStage, MenuBar menuBar, EventBus eventBus) {
         this.mainStage = mainStage;
         this.menuBar = menuBar;
+        this.eventBus = eventBus;
     }
 
     public Stage getMainStage() {
@@ -30,4 +33,7 @@ public class PluginConfiguration {
         return menuBar;
     }
 
+    public EventBus getEventBus() {
+        return eventBus;
+    }
 }
